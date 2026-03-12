@@ -9,9 +9,8 @@ import {
 export default function App() {
   return (
     <View style={styles.mainContainer}>
-
-      {/* Linha com input (65%) + botão (30%) */}
-      <View style={{ flexDirection: 'row', justifyContent: 'space-between', flex: 1 }}>
+      
+      <View style={styles.inputRow}>
         <View style={{ width: '65%' }}>
           <TextInput
             style={styles.inputText}
@@ -23,7 +22,6 @@ export default function App() {
         </View>
       </View>
 
-      {/* Container da lista de metas */}
       <View style={styles.metaContainer}>
         <Text>{rotulo_lista_metas}</Text>
       </View>
@@ -44,6 +42,11 @@ const styles = StyleSheet.create({
     flexDirection: 'column',
   },
 
+  inputRow: {
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+
   inputText: {
     borderColor: '#cccccc',
     borderWidth: 1,
@@ -51,5 +54,6 @@ const styles = StyleSheet.create({
 
   metaContainer: {
     flex: 1,
+    marginTop: 20,
   },
 });
